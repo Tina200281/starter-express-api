@@ -2,7 +2,7 @@
 
 This is the simplest possible nodejs api using express that responds to any request with: 
 ```
-Yo!
+IOT PROJECT 1401
 ```
 
 ### Deploy it in 7 seconds: 
