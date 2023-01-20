@@ -1,15 +1,8 @@
-const express = require('express');
-const http = require("http");
-const host = 'localhost';
-const port = 8000;
-const app = express();
-app.use(express.urlencoded());
-
-
-//get methode
-app.get('/', function(request, response, next){
-
-	response.send(`
+const express = require('express')
+const app = express()
+app.all('/', (req, res) => {
+    console.log("Just got a request!")
+    response.send(`
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<div class="container">
@@ -34,16 +27,5 @@ app.get('/', function(request, response, next){
 			</div>
 		</div>
 	`);
-
-
-});
-
-app.get('/', function(request, response, next){
-	response.send(request.body);
-});
-//port
-
-app.listen(8000, function () {
-    console.log(`Listen on port ${port}`);
-});
-
+})
+app.listen(process.env.PORT || 3000)
