@@ -26,6 +26,6 @@ app.all('/', (req, res) => {
 				</div>
 			</div>
 		</div>
-	`);
+	`)
 })
 app.listen(process.env.PORT || 3000)
