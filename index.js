@@ -10,7 +10,7 @@ app.all('/', (req, res) => {
 			<div class="card">
 				<div class="card-header">IOT Form</div>
 				<div class="card-body">
-					<form method="post" action="/">
+					<form method="get" action="/">
 						<div class="mb-3">
 							<label>Time(ms) ON:</label>
 							<input type="text" name="ON" id="ON" class="form-control" />
