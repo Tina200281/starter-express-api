@@ -8,9 +8,9 @@ app.all('/', (req, res) => {
 		<div class="container">
 			<h1 class="text-center mt-3 mb-3">LED ON OR OFF</h1>
 			<div class="card">
-				<div class="card-header">Sample Form</div>
+				<div class="card-header">IOT Form</div>
 				<div class="card-body">
-					<form method="get" action="/">
+					<form method="post" action="/">
 						<div class="mb-3">
 							<label>Time(ms) ON:</label>
 							<input type="text" name="ON" id="ON" class="form-control" />
